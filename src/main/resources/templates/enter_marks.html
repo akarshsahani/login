@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Enter Marks - CodeJava</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>User Marks - Entery Point .....!!!</h1>
+		</div>
+		<div>
+			<form th:action="@{/process_marks}" method="post"
+			style="max-width: 600px; margin: 0 auto;"
+				th:object="${marks}">
+				
+				
+				
+				<div class="m-3">
+					<div class="form-group raw">
+						<label class="col-form-label col-4">Java</label>
+						<div class="col-8">
+							<input type="number" class="form-control" th:field="*{java}" required
+							minlength="1" maxlength="2"/>
+						</div>
+					</div>
+					
+					
+					<div class="form-group raw">
+						<label class="col-form-label col-4">Python</label>
+						<div class="col-8">
+							<input type="number" class="form-control" th:field="*{python}" required
+							minlength="1" maxlength="2"/>
+						</div>
+					</div>
+					
+					
+					<div class="form-group raw">
+						<label class="col-form-label col-4">C Language</label>
+						<div class="col-8">
+							<input type="number" class="form-control" th:field="*{cLanguage}" required
+							minlength="1" maxlength="2"/>
+						</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					<div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+					
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
